@@ -1,0 +1,58 @@
+---
+title: "UNIDAD 3: Práctica 13 - Espacios muestrales"
+author: "Caterine Melissa Guerrero España"
+date: "2022-09-05"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**GENERACIÓN DE ESPACIOS MUESTRALES Y DE MUESTRAS ALEATORIAS.**
+
+La función sample(): permite seleccionar una muestra aleatoria de tamaño n , especificado el vector x desde el cual tomará la muestra (normalmente es un vector de caracteres aunque no es indispensable), la selección puede ser con o sin reemplazo. La sintaxis general de esta función es:
+
+sample(X, size, replace = FALSE, prob = NULL)
+
+donde
+
+-   X: es el vector del cual se seleccionan la muestra (podría decirse que representa el marco muestral).
+
+-   size: es el tamaño de la muestra.
+
+-   replace = FALSE indica que la muestra en sin reposición, si fuera TRUE sería con reposición.
+
+-   prob: vector de pesos o probabilidad de obtener los elementos del vector X que está siendo muestreado (en caso de que los elementos tengan distintas probabilidades).
+
+**1) Activa tu directorio de trabajo**
+
+```{r}
+getwd()
+setwd("C:/Users/user/OneDrive/Paquete R/PRACTICAS-S5")
+```
+
+**2) Crea un nuevo Script y llámale "Script13-Probabilidades1"**
+
+**3) Simular 10 lanzamientos de una moneda**
+
+*vector del cual se tomará la muestra*
+
+```{r}
+moneda<-c("C", "+")
+moneda
+```
+
+*tamaño de la muestra*
+
+```{r}
+n <- 10
+n
+```
+
+*generando la muestra aleatoria con reemplazamiento (replace=TRUE)*
+```{r}
+lanzamientos<-sample(moneda, n, replace=TRUE)
+lanzamientos
+```
+
